@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;    
+}
+body{
+    min-height: 100vh;
+    background:linear-gradient(125deg,
+        #00B7D4, #0E7080, #2F3F80,#161569,
+        #5A4894, #A9501A, #FF7CAE
+    );
+    background-position: center;
+    background-size: 500%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fefefe;    
+    animation: bg_gradient 25s infinite;
+}
+
+@keyframes bg_gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/* Login Form */
+
+.login_container{
+    display: flex;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(20px);
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    border-radius: .5rem;
+    gap: 2rem; /*Da espacio entre cada elemento*/
+    min-height: 40vh;
+    flex-direction: column;
+    padding: 2rem;    
+}
+/* Media Query */
+@media(min-width: 768px){
+    .login_container{
+        flex-direction: row;
+        padding: 4rem 5rem; /* solo dos arriba/abajo y luego izq/der*/
+        gap: 5rem;
+    }
+    
+}
+.login_content{
+    max-width: 400px;
+    text-align: center;    
+}
+.login_conten--title{
+    font-size: 12vw;
+    margin-bottom: 1rem;
+}
+@media(min-width:628px){
+    .login_conten--title{
+        font-size: 4rem;
+    }
+}
+.login_form{
+    max-width: 250px;
+    width: 100%;    
+}
+.login_form--title{
+    font-size: 12vw;
+    margin-bottom: 1rem;
+}
+@media(min-width:628px){
+    .login_form--title{
+        font-size: 4rem;
+    }
+}
+.form_group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    gap: .5rem;
+}
+input{
+    border-radius: 0.5rem;
+    padding: .5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, .5);
+    background-color: rgba(0, 0, 0, .1);
+    color: white;    
+}
+input::placeholder{
+    color: white;
+}
+button{
+    cursor: pointer;
+    padding: .5rem 1rem;
+    background-color: #d93954;
+    color: white;
+    border: none;
+    border-radius: .5rem;    
+}
